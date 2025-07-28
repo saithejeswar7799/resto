@@ -1,0 +1,50 @@
+<html>
+<body textalign="center">
+<h2>LOGIN:</h2>
+<label for="mobile number">mobile number:</label><br>
+  <input type="number" id="mnum" name="mnum" ><br><br>
+<button onclick="genotp()">Generate Otp</button><br>
+<p id="demo">OTP IS:</p>
+
+<label for="enter otp">Enter Otp:</label><br>
+  <input type="number" id="onum" name="onum" ><br><br>
+<button onclick="valotp()">Validate Otp</button><br><br>
+<p id="gg"></p>
+<script>
+var otp="";
+function genotp()
+
+{
+
+const otplength="5";
+var otpseries="0123456789";
+
+for(i=0;i<otplength;i++)
+{
+var x=(Math.floor(Math.random()*otpseries.length));
+otp +=x;
+}
+document.getElementById("demo").innerHTML=otp;
+}
+function valotp()
+{
+var z=document.getElementById("onum").value;
+if(otp==z)
+{
+document.getElementById("gg").innerHTML="valid otp";
+}
+else
+{
+document.getElementById("gg").innerHTML="not valid otp";
+
+
+}}
+
+</script>
+
+
+
+
+
+</body>
+</html>

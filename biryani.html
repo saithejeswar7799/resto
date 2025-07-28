@@ -1,0 +1,205 @@
+<html>
+<head>
+    <style>
+.navbar{
+   background-color:#faf7f5;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+   padding:12px 100px;
+   border-bottom: 1px solid #2c2c2c;
+   
+   }
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product h2 {
+    margin: 0.5rem 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <header class="navbar">
+        <img style="padding-left:20px;width:70px;height:65px"src="C:\Users\B.SAITHEJESWAR REDDY\OneDrive\Pictures\Saved Pictures\resto.jpg">
+        
+        <button class="geeks" onclick="getlocation()">
+                loction
+            </button>
+          </div>
+        
+        <div class="search">
+                    <form action="#">
+                        <input type="text" placeholder="Search items"
+                               name="search">
+                        <button>
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+        
+        
+        
+        
+        <div class="login">
+        <a style="padding-right: 20px;font-size:22px;" href="loginotp.html">login</a>
+        <a style="padding-right: 20px;font-size:22px;" href="#">signup</a></div>
+    
+    
+        <p align="right" id="demo7">
+            CartValue:<input type="text" id="quantity"  value="0" readonly style="width: 30px; height: 25px;"></p></div>
+            
+    
+    
+    </header><br><br><br>
+        
+    <section class="products">
+        <article class="product">
+            <img src="C:\Users\B.SAITHEJESWAR REDDY\OneDrive\Pictures\Saved Pictures\dum.jpeg" alt="Product 1">
+            <h2>DumBiryani</h2>
+            <p>₹140</p>
+
+            <button  onClick="decrement()" class="add-to-cart">-</button><p id="demo7">
+           </p>
+            <button onClick="increment()"class="add-to-cart">+</button>
+          
+        </article>
+        <article class="product">
+            <img src="C:\Users\B.SAITHEJESWAR REDDY\OneDrive\Pictures\Saved Pictures\roast.jpg" alt="Product 2"><br><br><br><br>
+            <h2>RoastBiryani</h2>
+            <p>₹180</p>
+            <button onClick="decrement1()" class="add-to-cart">-</button>
+            <p id="demo7"></p>
+            <button onClick="increment1()" class="add-to-cart">+</button>
+        </article>
+        <article class="product">
+            <img src="C:\Users\B.SAITHEJESWAR REDDY\OneDrive\Pictures\Saved Pictures\fry.webp" alt="Product 3"><br><br><br>
+            <h2>FryBiryani</h2>
+            <p>₹200</p>
+            <button onClick="decrement2()" class="add-to-cart">-</button>
+            <p id="demo7"></p>
+            <button onClick="increment2()"class="add-to-cart">+</button>
+        </article>
+        <article class="product">
+            <img src="C:\Users\B.SAITHEJESWAR REDDY\OneDrive\Pictures\Saved Pictures\Mutton-Biryani.jpg" alt="Product 4">
+
+            <h2>MuttonBiryani</h2>
+            <p>₹250</p>
+            <button onClick="decrement3()" class="add-to-cart">-</button>
+            <p id="demo7"></p>
+            <button onClick="increment3()"class="add-to-cart">+</button>
+        </article>
+        <article class="product">
+            <img src="C:\Users\B.SAITHEJESWAR REDDY\OneDrive\Pictures\Saved Pictures\Prawn-Biryani.webp" alt="Product 5">
+            <h2>PrawnsBiryani</h2>
+            <p>₹300</p>
+            <button onClick="decrement4()" class="add-to-cart">-</button>
+            <p id="demo7"></p>
+            <button onClick="increment4()" class="add-to-cart">+</button>
+        </article>
+    </section>
+
+
+<script>
+    var x=0; var y=0;
+function increment(){
+x+=1;y=x;
+document.getElementById("demo7").innerHTML=x;}
+ x=y;y=x-1;
+function decrement(){
+y=x--;
+document.getElementById("demo7").innerHTML=y;}
+
+var x=0; var y=0;
+function increment1(){
+x+=1;y=x;
+document.getElementById("demo7").innerHTML=x;}
+ x=y;y=x-1;
+function decrement1(){
+y=x--;
+document.getElementById("demo7").innerHTML=y;}
+
+var x=0; var y=0;
+function increment2(){
+x+=1;y=x;
+document.getElementById("demo7").innerHTML=x;}
+ x=y;y=x-1;
+function decrement2(){
+y=x--;
+document.getElementById("demo7").innerHTML=y;}
+var x=0; var y=0;
+function increment3(){
+x+=1;y=x;
+document.getElementById("demo7").innerHTML=x;}
+ x=y;y=x-1;
+function decrement3(){
+y=x--;
+document.getElementById("demo7").innerHTML=y;}
+
+var x=0; var y=0;
+function increment4(){
+x+=1;y=x;
+document.getElementById("demo7").innerHTML=x;}
+ x=y;y=x-1;
+function decrement4(){
+y=x--;
+document.getElementById("demo7").innerHTML=y;}
+sai();
+function sai()
+{
+ var e=sessionStorage.getItem("uName");
+document.getElementById("gg").innerHTML =e ;
+   }
+sai1();
+function sai1()
+{
+ var y=sessionStorage.getItem("mNum");
+document.getElementById("gg1").innerHTML =y;
+   }
+</script>
+
+
+</body>
+</html>
